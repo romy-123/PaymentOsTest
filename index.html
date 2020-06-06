@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <title>TestPayU</title>
+      <script language="JavaScript" type="text/javascript" src="https://js.paymentsos.com/v2/latest/secure-fields.min.js"/>
+         <script>POS.setPublicKey("d461201a-1601-4886-a4b9-61ef1fddbe96");
+      </script>
+     <!--<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">-->
+   </head>
+   <body style="margin: 0;">
+      <form id="payment-form">
+         <input type="text" id="cardholder-name" placeholder="John" />
+         <div id="card-secure-fields">
+            <!-- The payment form will be displayed here -->
+         </div>
+         <button type=”submit”>Pay</button>
+      </form>
+      <script>
+         // Set your environment. Values are either "test" or "live".
+         // If omitted, the test environment will be used.
+         POS.setEnvironment("test");
+         POS.setPublicKey("d461201a-1601-4886-a4b9-61ef1fddbe96");
+         
+         // Make sure to use camelCase for the style attributes
+         
+         const style = {
+         base: { // Common to all input fields
+           color: 'green',
+           lineHeight: '40px',
+           fontWeight: 400,
+           fontSize: '13px',
+         
+           // Here you can style the span element that wraps the secure fields.
+           // The default values are shown below.
+           secureFields: {
+             top:0
+           },
+         
+           // The Primary Account Number (PAN) field is always included in the form.
+           // You can style it here.
+           pan: {
+             fontSize: '13px'
+           },
+         
+           // The expirationDate field is always included in the form.
+           // You can style it here.
+           expirationDate: {
+             color: 'blue',
+             fontSize: '13px',
+             // width: '70px'
+           },
+         
+           // Unless you disable the cvv field, it will be included in the form.
+           // You can style it here.
+           cvv: {
+             color: 'red',
+             fontSize: '13px',
+           }
+         }
+         };
+         
+         // Done styling? Let us know, so that we can apply your changes.
+         POS.setStyle(style);
+         
+         
+         // Initialize the form's fields
+         
+         POS.disableSecurityNumber();
+         POS.initSecureFields('card-secure-fields');
+         
+         
+         // Attach a click event to the form that is invoked when the
+         // form is submitted. On submit, pass the card information to
+         // PaymentsOS and receive the token representing the card
+         // information in your site.
+         document.getElementById('payment-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const additionalData = {
+        holder_name: document.getElementById('cardholder-name').value // This field is mandatory
+      }
+           POS.createToken((additionalData), function(result){
+         
+            var response = JSON.parse(result);
+			const token = response.token;
+			console.log(token);
+			POS.createPayment(token, function(result){
+		   console.log(result)
+		   });
+		
+         
+           });
+		   
+		   
+         });
+	
+         		
+      </script>
+   </body>
+
