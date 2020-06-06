@@ -1,0 +1,45 @@
+{
+    "id": "6d432ad9-3205-444e-abb6-0d6da93704d8",
+    "created": "1591421520407",
+    "provider_specific_data": {},
+    "payment_method": {
+        "type": "tokenized",
+        "token": "3dd83b00-08c1-455a-a4a9-f6cfa4a8a23e",
+        "token_type": "credit_card",
+        "holder_name": "John Doe",
+        "expiration_date": "12/2024",
+        "last_4_digits": "0009",
+        "pass_luhn_validation": true,
+        "fingerprint": "72a8cf09-2b79-42a7-ba8a-c8d83717668b",
+        "bin_number": "340000",
+        "vendor": "AMERICAN EXPRESS",
+        "issuer": "AMERICAN EXPRESS",
+        "card_type": "CREDIT",
+        "level": "",
+        "country_code": "USA",
+        "created": "1591421376979"
+    },
+    "result": {
+        "status": "Succeed"
+    },
+    "provider_data": {
+        "provider_name": "MockProcessor",
+        "response_code": "0",
+        "description": "Authorized.",
+        "raw_response": "{\"OID\":\"428e0581-c09f-4eb5-af4f-7c1d54a2d70d\",\"AUTH_CODE\":\"428e0\",\"RETURN_MESSAGE\":\"Authorized.\",\"TRANSID\":\"b5331433-bf79-46d7-8dc7-35ab7dc42b05_8d4e8960-f945-4bc0-af71-3be8e70d6ac1_Authorization\",\"STATUS\":\"SUCCESS\",\"AMOUNT\":\"23\",\"DATE\":\"1591421520407\",\"RETURN_CODE\":\"0\",\"CURRENCY\":\"USD\"}",
+        "authorization_code": "428e0",
+        "transaction_id": "b5331433-bf79-46d7-8dc7-35ab7dc42b05_8d4e8960-f945-4bc0-af71-3be8e70d6ac1_Authorization",
+        "external_id": "428e0581-c09f-4eb5-af4f-7c1d54a2d70d"
+    },
+    "amount": 2300,
+    "provider_configuration": {
+        "id": "c1256446-cf79-4e25-bd55-b57d88d66a49",
+        "name": "test",
+        "created": "1591372353056",
+        "modified": "1591372353056",
+        "account_id": "8d4e8960-f945-4bc0-af71-3be8e70d6ac1",
+        "provider_id": "c87ee096-e1a4-4502-9194-9e9b6e867bf0",
+        "type": "cc_processor",
+        "href": "https://api.paymentsos.com/accounts/8d4e8960-f945-4bc0-af71-3be8e70d6ac1/provider-configurations/c1256446-cf79-4e25-bd55-b57d88d66a49"
+    }
+}

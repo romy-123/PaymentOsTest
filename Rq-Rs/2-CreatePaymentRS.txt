@@ -1,0 +1,27 @@
+{
+    "id": "428e0581-c09f-4eb5-af4f-7c1d54a2d70d",
+    "currency": "USD",
+    "created": "1591421420572",
+    "modified": "1591421420572",
+    "is_chargedback": false,
+    "status": "Initialized",
+    "possible_next_actions": [
+        {
+            "action": "Credit",
+            "href": "https://api.paymentsos.com/payments/428e0581-c09f-4eb5-af4f-7c1d54a2d70d/credits"
+        },
+        {
+            "action": "Charge",
+            "href": "https://api.paymentsos.com/payments/428e0581-c09f-4eb5-af4f-7c1d54a2d70d/charges"
+        },
+        {
+            "action": "Authorization",
+            "href": "https://api.paymentsos.com/payments/428e0581-c09f-4eb5-af4f-7c1d54a2d70d/authorizations"
+        },
+        {
+            "action": "Update Payment",
+            "href": "https://api.paymentsos.com/payments/428e0581-c09f-4eb5-af4f-7c1d54a2d70d"
+        }
+    ],
+    "amount": 2300
+}

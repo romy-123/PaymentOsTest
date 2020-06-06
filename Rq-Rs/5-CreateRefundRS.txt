@@ -1,0 +1,27 @@
+{
+    "id": "50a49215-8830-4541-83fc-6c1ac3b4c68a",
+    "created": "1591422138494",
+    "result": {
+        "status": "Pending"
+    },
+    "provider_data": {
+        "provider_name": "MockProcessor",
+        "response_code": "1",
+        "description": "pending refund",
+        "raw_response": "{\"OID\":\"a64b862d-0c5a-43b1-9519-9328f6805782\",\"AUTH_CODE\":\"a64b8\",\"RETURN_MESSAGE\":\"pending refund\",\"TRANSID\":\"ba7e67ec-ca9f-4b49-b1cc-721fb8aa4897_8d4e8960-f945-4bc0-af71-3be8e70d6ac1_Refund\",\"STATUS\":\"PENDING\",\"AMOUNT\":\"20\",\"DATE\":\"1591422138494\",\"RETURN_CODE\":\"1\",\"CURRENCY\":\"USD\"}",
+        "authorization_code": "a64b8",
+        "transaction_id": "ba7e67ec-ca9f-4b49-b1cc-721fb8aa4897_8d4e8960-f945-4bc0-af71-3be8e70d6ac1_Refund",
+        "external_id": "a64b862d-0c5a-43b1-9519-9328f6805782"
+    },
+    "amount": 2000,
+    "provider_configuration": {
+        "id": "c1256446-cf79-4e25-bd55-b57d88d66a49",
+        "name": "test",
+        "created": "1591372353056",
+        "modified": "1591372353056",
+        "account_id": "8d4e8960-f945-4bc0-af71-3be8e70d6ac1",
+        "provider_id": "c87ee096-e1a4-4502-9194-9e9b6e867bf0",
+        "type": "cc_processor",
+        "href": "https://api.paymentsos.com/accounts/8d4e8960-f945-4bc0-af71-3be8e70d6ac1/provider-configurations/c1256446-cf79-4e25-bd55-b57d88d66a49"
+    }
+}
