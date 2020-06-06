@@ -85,9 +85,7 @@
             var response = JSON.parse(result);
 			const token = response.token;
 			console.log(token);
-			POS.createPayment(token, function(result){
-		   console.log(result)
-		   });
+			console.log(result);
 		
          
            });
