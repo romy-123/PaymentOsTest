@@ -1,0 +1,13 @@
+Answer to technical questions: 
+-Tokenization: Process to safeguard credit card data , converting it’s details in the token representation.
+-Authorize: In this case is to hold the founds on the customer account. 
+-Capture: When the payment is authorized, it completes the transaction.
+-Charge: A transfer in one step from the customer account.
+-Void: Cancel an operation, but it has to be before it has been finalized.
+-Refund: Allows to cancel a transfer or sale, and return the amount to the customer account
+
+
+Durign this time, i've been on the client side, developing the solution that usually has to consume the API or Service, 
+sometimes it's hard but usually because of comunication problems, or resource problems like sharing certificates, it's not hard 
+but it's important to have a technical people on the other side that help to integrate the solution of the client. 
+I've worked with services to diferent technologies and diferent providers like, usually for transction or bank account validations bvc or ach.
